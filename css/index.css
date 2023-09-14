@@ -1,0 +1,106 @@
+@keyframes latido {
+    from{
+        transform: scale(1);
+
+    }    
+    to{
+        transform: scale(1.5);
+    }
+}
+:root{
+    scroll-behavior: smooth;
+}
+.body {
+    margin: 0;
+    background-color: crimson;
+    color: white;
+    font-family: monospace;
+}
+.hero{
+    min-height: 100vh;
+    display: flex;
+    background-image: radial-gradient(transparent, #161816);
+}
+.hero__tittle{
+    font-size: 2.5rem;
+    animation: latido 1s ease-in-out 0s infinite alternate;
+}
+.hero__acrostic{
+    all: unset;
+    display: flex;
+    cursor: pointer;
+    gap: 0.5rem;
+}
+ .hero__letter{
+    position: relative;
+ }
+.hero__letter:nth-child(1){
+    color: aqua;
+}
+.hero__letter:nth-child(2){
+    color: black;
+}
+.hero__letter:nth-child(3){
+    color: green;
+}
+.hero__letter:nth-child(4){
+    color: cyan;
+}
+.hero__letter:nth-child(5){
+    color: royalblue;
+}
+.hero__letter:nth-child(6){
+    color: gold;
+}
+.hero__letter:nth-child(7){
+    color: lightgreen;
+}
+.hero__letter:nth-child(8){
+    color: lightseagreen;
+}
+
+.hero__letter::before{
+    content: var(--letter);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(1.25);
+    filter: blur(0.25rem);
+}
+.hero__letter::before{
+    content: var(--letter);
+    position: absolute;
+    top: 87.5%;
+    left: 0;
+    transform: rotatex(135deg);
+    filter: blur(0.25rem);
+}
+.acrostic{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-image: radial-gradient(transparent, #16181d);
+}
+.acrostic__stanza{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: grid;
+    gap: 16px;
+}
+.acrostic__verse{
+    font-weight: 700;
+    text-shadow: 
+    0 0 0.125rem cyan
+    0 0 0.125rem cyan;
+}
+.acrostic__verse::first-letter{
+    font-size: 1.5rem;
+}
+.container{
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
